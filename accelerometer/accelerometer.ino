@@ -1,5 +1,6 @@
 // Arduino code for using the MMA7361 Accelerometer Module for gesture control of a RC Car
-// Author: Ashwin Kachhara
+// Author: Ashwin Kachhara*, Sanchar Sharma*, Sumeet Fefar*
+// * IIT Bombay, India
 // Based on some code written by Babelduck Cybernetics
 // Written January 2013 
 int state=0;
