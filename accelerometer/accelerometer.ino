@@ -1,8 +1,7 @@
-// Arduino code for using the MMA7361 Accelerometer Module
-// Please feel free to copy, edit, distribute, sell, plagiarise ... Whatever you want  
-// A mention of Babelduck Cybernetics would be nice but is not necessary
-// Written January 2012 
-char str[512];                  // We will use this to construct a string to send with the readings
+// Arduino code for using the MMA7361 Accelerometer Module for gesture control of a RC Car
+// Author: Ashwin Kachhara
+// Based on some code written by Babelduck Cybernetics
+// Written January 2013 
 int state=0;
 void setup()
 {
@@ -16,11 +15,7 @@ void loop()
   x = analogRead(A0)-340;           // Read the X axis reading
   y = analogRead(A1)-370;           // Read the Y axis reading
   z = analogRead(A2)-350;           // Read the Z axis reading
-  /*
-  sprintf(str, "%d \t %d \t %d", x, y, z);   // Construct a string out of all three readings
-  Serial.println(str);                       // Print it to the serial link
-  delay(500);
-  */
+
   if(z<135){
     if(x>65){
       if(y>65) state=5;
